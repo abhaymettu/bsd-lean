@@ -1,0 +1,20 @@
+name: Lean build and axiom audit
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # Fetches the prebuilt Mathlib cache and runs `lake build`.
+      - uses: leanprover/lean-action@v1
+      # Fails if any declaration in the project uses `sorry` or a non-standard axiom.
+      - name: Axiom audit
+        run: lake env lean Verify.lean

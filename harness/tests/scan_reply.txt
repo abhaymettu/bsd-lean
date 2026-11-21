@@ -1,0 +1,4 @@
+A fixed fake prover reply for the scan control: one real name, one invented one, one line that is not a candidate.
+CANDIDATE: Nat.add_comm | Lean core, arithmetic | swap the summands | nothing
+CANDIDATE: `Nat.harnessInventedBridgeLemma` | nowhere | it does not exist | it does not exist
+this line is ignored
