@@ -83,6 +83,8 @@ theorem FermatCubic.infinite_setOf_prime_and_LFunction_eq_zero :
     {p : ℕ | p.Prime ∧ E.LFunction p = 0}.Infinite
 ```
 
+At `p = 11` the theorem for primes congruent to 3 modulo 4 gives `a_11 = 0` for `E: y² = x³ - x`, so its Frobenius polynomial is `T² + 11`. Both roots have 11-adic valuation `1/2`. Crossley uses this to rule out a nonzero map from a genus-two Jacobian to `E` in a prime-race rank calculation. [Point counts and Newton polygons](https://github.com/leecrossley/theta-host-split-inert-race/blob/33d454fbbce252bfac9068c792f25b193f377f93/results/algebraic-heights/PROOF.md#L748) and [archived paper](https://doi.org/10.5281/zenodo.24429782).
+
 ## What is new, and what is not
 
 I checked on 2026-11-21, against Mathlib (tag `v4.36.0` and master) and public Lean code on GitHub.
